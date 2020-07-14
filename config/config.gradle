@@ -1,0 +1,81 @@
+//app相关版本控制
+ext{
+    versions=[
+            sdkMinVersion:16,
+            sdkTargetVersion:29,
+            sdkCompileVersion:29,
+            toolsBuildVersion:'29.0.2',
+            appVersionCode:1,
+            appVersionName:'1.0.0'
+    ]
+     //依赖包版本
+    depVersions=[
+            appCompatVersion:'appcompat:1.1.0',
+            recyclerViewVersion:'1.2.0-alpha04',
+            okhttpVersion:'okhttp:4.7.2',
+            kotlinVersion:'kotlin-stdlib-jdk7:1.3.72',
+            corektxVersion:'core-ktx:1.3.0',
+            constraintlayoutVersion:'constraintlayout:1.1.3',
+            rxjava2_version:'rxjava:2.1.9',
+            rxjava2_android_version:'rxandroid:2.0.2',
+            retrofit2_version:'retrofit:2.3.0',
+            converter_gson_version:'converter-gson:2.3.0',
+            converter_scalars_version:'converter-scalars:2.3.0',
+            glide_version:'glide:4.11.0',
+            glide_compiler_version:'compiler:4.11.0',
+            rxlifecycle_version:'rxlifecycle:3.1.0',
+            rxlifecycle_android_version:'rxlifecycle-android:3.1.0',
+            rxlifecycle_android_lifecycle_version:'rxlifecycle-android-lifecycle:3.1.0',
+            rxlifecycle_components_version:'rxlifecycle-components:3.1.0',
+            adapter_rxjava_version:'adapter-rxjava2:2.3.0',
+            fastjson_version:'fastjson:1.2.47',
+            banner_version:'banner:2.0.12',
+            vlayout_version:'1.2.8@aar',
+            cardView_version:'1.0.0',
+            design_version:'1.3.0-alpha01',
+            multidex_version:'2.0.1',
+            zxing_version:'3.3.2',
+            zxing_core_version:'3.3.0',
+            smartRefreshLayout_version:"1.0.0",//必须 1.0.0 以上
+            refresh_header_material_version:"2.0.1",//谷歌刷新头
+            refresh_layout_kernel_version:"2.0.1",//核心必须依赖
+            refresh_footer_classics_version:"2.0.1"//经典加载
+
+
+
+    ]
+   //依赖包
+    dependencies=[
+            appcompat:"androidx.appcompat:${depVersions.appCompatVersion}",
+            recyclerview:"androidx.recyclerview:recyclerview:${depVersions.recyclerViewVersion}",
+            okhttp:"com.squareup.okhttp3:${depVersions.okhttpVersion}",
+            kotlin:"org.jetbrains.kotlin:${depVersions.kotlinVersion}",
+            core_ktx:"androidx.core:${depVersions.corektxVersion}",
+            constraintlayout:"androidx.constraintlayout:${depVersions.constraintlayoutVersion}",
+            rxjava2:"io.reactivex.rxjava2:${depVersions.rxjava2_version}",
+            rxjava2_android:"io.reactivex.rxjava2:${depVersions.rxjava2_android_version}",
+            retrofit2:"com.squareup.retrofit2:${depVersions.retrofit2_version}",
+            converter_gson:"com.squareup.retrofit2:${depVersions.converter_gson_version}",
+            converter_scalars:"com.squareup.retrofit2:${depVersions.converter_scalars_version}",
+            glide:"com.github.bumptech.glide:${depVersions.glide_version}",
+            glide_compiler:"com.github.bumptech.glide:${depVersions.glide_compiler_version}",
+            rxlifecycle:"com.trello.rxlifecycle3:${depVersions.rxlifecycle_version}",
+            rxlifecycle_android:"com.trello.rxlifecycle3:${depVersions.rxlifecycle_android_version}",
+            rxlifecycle_android_lifecycle:"com.trello.rxlifecycle3:${depVersions.rxlifecycle_android_lifecycle_version}",
+            rxlifecycle_components:"com.trello.rxlifecycle3:${depVersions.rxlifecycle_components_version}",
+            adapter_rxjava2:"com.squareup.retrofit2:${depVersions.adapter_rxjava_version}",
+            fastjson:"com.alibaba:${depVersions.fastjson_version}",
+            banner:"com.youth.banner:${depVersions.banner_version}",
+            vlayout:"com.alibaba.android:vlayout:${depVersions.vlayout_version}",
+            cardView:"androidx.cardview:cardview:${depVersions.cardView_version}",
+            design:"com.google.android.material:material:${depVersions.design_version}",
+            multidex:"androidx.multidex:multidex:${depVersions.multidex_version}",
+            zxing:"com.google.zxing:core:${depVersions.zxing_version}",
+            zxing_core:"com.google.zxing:android-core:${depVersions.zxing_core_version}",
+            smartRefreshLayout:"androidx.appcompat:appcompat:${depVersions.smartRefreshLayout_version}",
+            refresh_header_material:"com.scwang.smart:refresh-header-material:${depVersions.refresh_header_material_version}",
+            refresh_layout_kernel:"com.scwang.smart:refresh-layout-kernel:${depVersions.refresh_layout_kernel_version}",
+            refresh_footer_classics:"com.scwang.smart:refresh-header-classics:${depVersions.refresh_footer_classics_version}"
+
+    ]
+}

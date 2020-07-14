@@ -1,0 +1,85 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+def versions=rootProject.ext.versions
+def dep=rootProject.ext.dependencies
+
+android {
+    compileSdkVersion versions.sdkCompileVersion
+    buildToolsVersion versions.toolsBuildVersion
+
+
+    defaultConfig {
+        minSdkVersion versions.sdkMinVersion
+        targetSdkVersion versions.sdkTargetVersion
+        versionCode versions.appVersionCode
+        versionName versions.appVersionName
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    kapt {
+        generateStubs = true
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation dep.kotlin
+    implementation dep.core_ktx
+    implementation dep.constraintlayout
+    implementation dep.recyclerview
+    implementation dep.appcompat
+
+    /*=================================================================网络请求相关==========================================*/
+    //implementation dep.okhttp
+    api dep.rxjava2
+    api dep.rxjava2_android
+    api dep.rxlifecycle
+    api dep.rxlifecycle_android
+    api dep.rxlifecycle_android_lifecycle
+    api dep.rxlifecycle_components
+
+    api dep.retrofit2
+    api dep.converter_scalars
+    api dep.adapter_rxjava2
+    api dep.okhttp
+
+
+    /*=================================================================加载图片相关==========================================*/
+    api dep.glide
+    kapt dep.glide_compiler
+
+    /*=================================================================数据解析相关==========================================*/
+    api dep.fastjson
+    api dep.converter_gson
+    /*=================================================================banner相关==========================================*/
+    api dep.banner
+
+    /*=================================================================阿里vlayout相关==========================================*/
+    api(dep.vlayout){transitive = true}
+    api dep.cardView
+    api dep.design
+    api dep.multidex
+
+    /*=================================================================扫码相关==========================================*/
+    api dep.zxing
+    api dep.zxing_core
+
+    /*=================================================================下拉刷新相关==========================================*/
+    api dep.smartRefreshLayout
+    api dep.refresh_header_material
+    api dep.refresh_layout_kernel
+    api dep.refresh_footer_classics
+
+}
